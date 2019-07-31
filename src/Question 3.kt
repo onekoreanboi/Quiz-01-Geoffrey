@@ -1,8 +1,7 @@
 fun main() {
-    val b = rationalNumber(3, 4)
-    val c = rationalNumber(5, 2)
-    var bc = add(5, 2, 3, 4)
-    println(bc)
-
-
+    val double = RationalNumber(3, 8)
+    val rationalNumberOne = RationalNumber(1, 9)
+    val rationalNumberTwo = RationalNumber(5, 2)
+    println(toDouble(double))
+    println(add(rationalNumberOne, rationalNumberTwo))
 }

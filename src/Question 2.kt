@@ -1,15 +1,23 @@
-fun toDouble(numerator: Int, denominator: Int): Double{
-    val double: Double = (numerator.toDouble()/denominator.toDouble())
+fun toDouble(input:RationalNumber): Double{
+    val double: Double = (input.numerator.toDouble()/input.denominator.toDouble())
     return(double)
 }
 
-fun add (numerator: Int, denominator: Int, numerator2: Int, denominator2: Int): rationalNumber {
-    val x = denominator
-    val z = denominator2
-    val y = z
-    val a = y/x
-    val b = numerator * a
-    val numeratorFinal = b + numerator2
-    val denominatorFinal = y
-    return rationalNumber (numeratorFinal, denominatorFinal)
-    }
+fun add (inputOne:RationalNumber, inputTwo:RationalNumber): RationalNumber {
+
+    //Numbers
+    val num1 = inputOne.numerator
+    val den1 = inputOne.denominator
+    val num2 = inputTwo.numerator
+    val den2 = inputTwo.denominator
+
+    //The math
+
+    var newDen = den1 * den2
+    val newNum1 = num1 * den2
+    val newNum2 = num2 * den1
+    var finalNum = newNum1 + newNum2
+
+    return RationalNumber(finalNum, newDen)
+
+}
